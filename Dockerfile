@@ -58,6 +58,6 @@ RUN apk add --quiet --no-cache libstdc++ bash && \
     rm -rf /var/cache/* /tmp/*
 
 # This accepts the licenses, please keep that in mind, you have to conform to the license.
-RUN sh 'mkdir "$ANDROID_HOME/licenses" || true' \
-    sh 'echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"' \
-    sh 'echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"'
+RUN mkdir "$ANDROID_HOME/licenses" \
+    echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"\
+    echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
