@@ -53,7 +53,7 @@ RUN apk add --quiet --no-cache libstdc++ bash && \
     curl --create-dirs -sSLo ${ANDROID_HOME}/${ANDROID_SDK_FILENAME} ${ANDROID_SDK_URL} && \
     unzip -q ${ANDROID_HOME}/${ANDROID_SDK_FILENAME} -d ${ANDROID_HOME} && \
     rm -rf ${ANDROID_HOME}/${ANDROID_SDK_FILENAME} && \
-    (while sleep 3; do echo "y"; done) | bin/sdkmanager update && \
+    (while sleep 3; do echo "y"; done) | android -s update sdk --no-ui --all --filter tools,platform-tools,${ANDROID_BUILD_TOOLS_VERSION},${ANDROID_API_LEVELS},extra-android-m2repository,extra-google-m2repository && \
     apk del build-dependencies && \
     rm -rf /var/cache/* /tmp/*
 
