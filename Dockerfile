@@ -5,7 +5,7 @@ MAINTAINER Dominik Hahn <dominik@monostream.com>
 MAINTAINER Cedric Gatay <c.gatay@code-troopers.com>
 
 # Set ENV
-ENV ANDROID_SDK_VERSION=r29.0.2
+ENV ANDROID_SDK_VERSION=r29.0.0
 ENV ANDROID_BUILD_TOOLS_VERSION=build-tools-22.0.1,build-tools-23.0.3,build-tools-24.0.3,build-tools-25.0.3,build-tools-26.0.2,build-tools-27.0.3,build-tools-29.0.0
 ENV ANDROID_SDK_FILENAME=tools_${ANDROID_SDK_VERSION}-linux.zip
 ENV ANDROID_SDK_URL=https://dl.google.com/android/repository/${ANDROID_SDK_FILENAME}
